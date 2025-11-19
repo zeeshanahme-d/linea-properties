@@ -1,4 +1,4 @@
-/* globals.css */
+/* @import url('./custom-scroll-bar.css'); */
 @import "tailwindcss";
 
 /* your existing design tokens */
@@ -45,10 +45,13 @@
   --color-dark: var(--dark-text-color);
   --color-gray: var(--gray-text-color);
   --color-light: var(--light-text-color);
+
   --color-bg-base: var(--light-background-color);
   --color-bg-medium: var(--medium-background-color);
   --color-bg-dark: var(--dark-background-color);
-  --color-border-base: var(--light-border-color);
+
+  --color-border-light: var(--light-border-color);
+  --color-border-dark: var(--dark-border-color);
 
   /* fonts: Tailwind generates font-family utilities from --font-* */
   --font-body: var(--font-family-body);
@@ -60,8 +63,33 @@
   --spacing-button-y: var(--button-padding-y);
 }
 
+/* Hide scrollbar for Chrome, Safari, Edge */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  box-sizing: border-box;
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
+}
+
+.bottom-custom-radius::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  z-index: 50;
+  width: 100%;
+  height: 100px;
+  border-top-left-radius: 63%;
+  border-top-right-radius: 50%;
 }

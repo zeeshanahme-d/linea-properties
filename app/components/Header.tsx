@@ -1,8 +1,12 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Image from "next/image";
 import Wrapper from "./Wrapper";
+import Hamburger from "hamburger-react";
 
 const Header: React.FC = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
         <header
             id="global-header"
@@ -22,7 +26,7 @@ const Header: React.FC = () => {
                     </a>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden lg:flex items-center space-x-8">
+                    <nav className="hidden md:flex items-center space-x-8">
                         <a
                             href="#about"
                             className="text-dark hover:text-primary transition-colors duration-300 font-medium"
@@ -36,8 +40,8 @@ const Header: React.FC = () => {
                             Services
                         </a>
                         <a
-                            href="#contact"
-                            className="bg-primary font-semibold text-light px-6 py-3 rounded-lg hover:bg-accent-dark transition-all duration-300  shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                            href="#contactus"
+                            className="bg-primary text-center font-semibold text-light px-6 py-3 rounded-lg hover:bg-accent-dark transition-all duration-300  shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                         >
                             Contact Us
                         </a>
@@ -45,41 +49,38 @@ const Header: React.FC = () => {
 
                     {/* Mobile Menu Button */}
                     <button
-                        data-landingsite-mobile-menu-toggle=""
-                        className="lg:hidden text-dark-700 p-2 rounded-md hover:bg-light transition-colors"
-                        aria-expanded="false"
+                        className="md:hidden"
                     >
-                        <i className="fas fa-bars text-2xl" aria-hidden="true"></i>
+                        <Hamburger rounded size={30} duration={0.4} easing="ease-in-out" toggled={menuOpen} toggle={setMenuOpen} />
                     </button>
+
                 </div>
 
-                {/* Mobile Navigation */}
-                <div
-                    data-landingsite-mobile-menu=""
-                    className="lg:hidden pb-4 hidden"
-                >
-                    <div className="flex flex-col space-y-4">
+            </Wrapper>
+            <div className='relative'>
+                <div className={`bg-light absolute w-full py-5 px-4 sm:px-6 transition-all duration-500 z-10  ${menuOpen ? "top-0" : "-top-92 opacity-0 pointer-events-none"}`}>
+                    <div className="flex flex-col space-y-5">
                         <a
                             href="#about"
-                            className="text-dark hover:text-text-primary transition-colors duration-300 font-medium py-2"
+                            className="text-dark hover:text-primary transition-colors duration-300 font-medium py-1"
                         >
                             About Us
                         </a>
                         <a
                             href="#services"
-                            className="text-dark hover:text-text-primary transition-colors duration-300 font-medium py-2"
+                            className="text-dark hover:text-primary transition-colors duration-300 font-medium py-1"
                         >
                             Services
                         </a>
                         <a
-                            href="#contact"
-                            className="bg-text-primary text-light px-6 py-3 rounded-lg hover:bg-primary-hover transition-all duration-300 font-semibold text-center"
+                            href="#contactus"
+                            className="bg-primary font-semibold text-center text-light px-6 py-3 rounded-lg hover:bg-accent-dark transition-all duration-300  shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                         >
                             Contact Us
                         </a>
                     </div>
                 </div>
-            </Wrapper>
+            </div>
         </header>
     );
 };

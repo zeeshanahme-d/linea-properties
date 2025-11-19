@@ -1,9 +1,11 @@
 import React from "react";
+import Wrapper from "./Wrapper";
+import Image from "next/image";
+//icons
 import { FaLinkedin, FaFacebookF, FaTiktok, FaApple, } from "react-icons/fa";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
-import Wrapper from "./Wrapper";
 
 
 
@@ -11,11 +13,13 @@ const Footer: React.FC = () => {
     return (
         <footer className="bg-bg-dark text-light pt-16 pb-6">
             <Wrapper>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+                <div className="grid grid-cols-1 lg:grid-cols-4  gap-8 mb-10">
                     {/* Logo + Description */}
                     <div className="space-y-4">
                         <div className="flex items-center gap-2">
-                            <img
+                            <Image
+                                width={100}
+                                height={100}
                                 src="/images/dashboard-logo.svg"
                                 alt="Linea Logo"
                                 className="h-32 w-auto"
@@ -99,14 +103,14 @@ const Footer: React.FC = () => {
                     <div className="space-y-4">
                         <h3 className="font-heading text-lg font-bold mb-6">Download App</h3>
                         <div className="flex flex-col gap-2">
-                            <a href="#" className="inline-flex items-center gap-x-3 justify-start bg-[#ffffff1a] text-light px-4 py-2 rounded-lg hover:bg-[#fff3] transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 group">
+                            <a href="#" className="inline-flex max-w-72 items-center gap-x-3 justify-start bg-[#ffffff1a] text-light px-4 py-2 rounded-lg hover:bg-[#fff3] transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 group">
                                 <IoLogoGooglePlaystore size={28} className="text-primary" />
                                 <div className="text-left">
                                     <div className="text-xs text-gray">GET IT ON</div>
                                     <div className="text-lg font-semibold">Google Play</div>
                                 </div>
                             </a>
-                            <a href="#" className="inline-flex items-center gap-x-3 justify-start bg-[#ffffff1a] text-light px-4 py-2 rounded-lg hover:bg-[#fff3] transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 group">
+                            <a href="#" className="inline-flex max-w-72 items-center gap-x-3 justify-start bg-[#ffffff1a] text-light px-4 py-2 rounded-lg hover:bg-[#fff3] transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 group">
                                 <FaApple size={28} className="text-primary" />
                                 <div className="text-left">
                                     <div className="text-xs text-gray">DOWNLOAD ON THE</div>
@@ -139,7 +143,7 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
                 {/* Footer Bottom */}
-                <div className="pt-8 border-t border-white/10 text-gray text-sm flex justify-between px-4 sm:px-6 lg:px-8">
+                <div className="pt-8 border-t border-white/10 text-gray text-sm flex justify-between">
                     <span>© {new Date().getFullYear()} Linea Properties. All Rights Reserved.</span>
                     {/* <span>
                         Built in Cameroon &bull; Made for Africa

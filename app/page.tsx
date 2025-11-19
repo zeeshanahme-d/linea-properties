@@ -1,8 +1,10 @@
-import About from "./components/AboutSec";
-import Banner from "./components/BannerSec";
+import About from "./sections/AboutSec";
+import Banner from "./sections/BannerSec";
+import Feature from "./sections/FeatureSec";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Services from "./components/ServicesSec";
+import Services from "./sections/ServicesSec";
+import Contact from "./sections/ContactSec";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
       <Banner />
       <About />
       <Services />
+      <Feature />
+      <Contact />
       <Footer />
     </div>
   );

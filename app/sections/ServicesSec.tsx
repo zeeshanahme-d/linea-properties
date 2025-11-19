@@ -73,7 +73,7 @@ const Services: React.FC = () => {
                     </div>
                     <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-dark mb-6">
                         Everything You Need in
-                        <span className="text-primary">One App</span>
+                        <span className="text-primary"> One App</span>
                     </h2>
                     <p className="text-lg text-gray max-w-3xl mx-auto">
                         Linea brings together all the tools you need to find, verify, and secure
@@ -86,7 +86,7 @@ const Services: React.FC = () => {
                     {servicesData.map((item) => (
                         <div
                             key={item.id}
-                            className={`group bg-white rounded-2xl p-6 xl:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-border-base ${item.className}`}
+                            className={`group bg-white rounded-2xl p-6 xl:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-border-light ${item.className}`}
                         >
                             <div
                                 style={{ backgroundImage: item.gradient }}

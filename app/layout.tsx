@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Raleway, Poppins } from "next/font/google";
-import "./globals.css";
+import "./style/globals.css";
 
 /* Set proper variable names */
 const raleway = Raleway({
