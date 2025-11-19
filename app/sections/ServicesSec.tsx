@@ -1,4 +1,5 @@
 import React, { JSX } from 'react';
+import Wrapper from '../components/Wrapper';
 
 import { FaShieldAlt, FaBell } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
@@ -61,11 +62,9 @@ const servicesData: ServiceItem[] = [
 
 const Services: React.FC = () => {
     return (
-        <section className="py-16 sm:py-24 lg:py-32 relative overflow-hidden" style={{ backgroundImage: "linear-gradient(to bottom right, #FDE9E5 , #fff)" }}>
-            {/* <!-- Decorative Background --> */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-accent-light rounded-full opacity-20 blur-3xl"></div>
+        <section className="py-16 sm:py-24 lg:py-32" style={{ backgroundImage: "linear-gradient(to bottom right, #FDE9E5 , #fff)" }}>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <Wrapper>
                 {/* <!-- Section Header --> */}
                 <div className="text-center mb-16">
                     <div className="inline-block bg-white text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4 shadow-md">
@@ -121,7 +120,7 @@ const Services: React.FC = () => {
                         <HiOutlineArrowSmRight size={32} className='text-white' />
                     </a>
                 </div>
-            </div>
+            </Wrapper>
         </section>
     )
 }

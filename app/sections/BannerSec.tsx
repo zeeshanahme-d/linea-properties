@@ -13,6 +13,7 @@ const Banner: React.FC = () => {
     return (
         <section className='relative'>
             <div className='relative pb-16 pt-20 sm:pb-24 lg:pb-32 overflow-hidden bg-accent-light' style={{ backgroundImage: "linear-gradient(to bottom right, #FDE9E5 , #F9F9F9)" }}>
+                {/* <!-- Decorative Element --> */}
                 <div className="absolute top-20 right-10 w-72 h-72 bg-accent-light rounded-full opacity-30 blur-3xl"></div>
                 <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent rounded-full opacity-20 blur-3xl"></div>
                 <Wrapper>

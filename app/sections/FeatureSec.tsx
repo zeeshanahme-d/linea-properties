@@ -5,6 +5,7 @@ import { FaApple, FaLock, FaDownload, FaKey, FaMapMarkedAlt } from "react-icons/
 import { MdHome } from "react-icons/md";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
 import { TiStarFullOutline } from "react-icons/ti";
+import Wrapper from '../components/Wrapper';
 
 
 
@@ -18,7 +19,7 @@ const Feature: React.FC = () => {
                     <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <Wrapper>
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                         {/* <!-- Left Content --> */}
                         <div className="text-center lg:text-left">
@@ -81,21 +82,21 @@ const Feature: React.FC = () => {
                                 </div>
 
                                 {/* <!-- Floating Feature Icons --> */}
-                                <div className="absolute -left-8 top-1/4 bg-white rounded-2xl shadow-2xl p-3 transform hover:rotate-6 transition-transform hidden sm:block z-10">
+                                <div className="absolute -left-8 top-1/4 bg-white rounded-2xl shadow-2xl p-3 transform hover:rotate-6 transition-transform hidden md:block z-10">
                                     <MdHome size={32} className="text-primary" />
                                 </div>
 
-                                <div className="absolute -right-8 top-1/3 bg-white rounded-2xl shadow-2xl p-3 transform hover:rotate-6 transition-transform hidden sm:block z-10">
+                                <div className="absolute -right-8 top-1/3 bg-white rounded-2xl shadow-2xl p-3 transform hover:rotate-6 transition-transform hidden md:block z-10">
                                     <FaKey size={32} className="text-primary" />
                                 </div>
 
-                                <div className="absolute -left-4 bottom-1/4 bg-white rounded-2xl shadow-2xl p-3 transform hover:rotate-6 transition-transform hidden sm:block z-10">
+                                <div className="absolute -left-4 bottom-1/4 bg-white rounded-2xl shadow-2xl p-3 transform hover:rotate-6 transition-transform hidden md:block z-10">
                                     <FaMapMarkedAlt size={32} className="text-primary" />
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </Wrapper>
             </div>
             {/* <!-- Bottom Wave --> */}
             <div className="absolute -bottom-1 md:-bottom-6 left-0 right-0">

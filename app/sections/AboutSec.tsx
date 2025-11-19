@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import Wrapper from '../components/Wrapper';
 //icons
 import { IoCheckmarkCircleSharp } from "react-icons/io5";
 import { FaShieldAlt, FaBell } from "react-icons/fa";
@@ -32,8 +33,8 @@ const features = [
 
 const About: React.FC = () => {
     return (
-        <section className="code-section bg-white py-16 sm:py-24 lg:py-32" id="s3ld85c" data-update-id="about">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="bg-white py-16 sm:py-24 lg:py-32">
+            <Wrapper>
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* <!-- Image Side --> */}
                     <div className="relative order-2 lg:order-1">
@@ -50,7 +51,7 @@ const About: React.FC = () => {
                         </div>
 
                         {/* <!-- Decorative Element --> */}
-                        <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-accent rounded-full opacity-20 blur-3xl -z-10"></div>
+                        {/* <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-accent rounded-full opacity-20 blur-3xl -z-10"></div> */}
                     </div>
 
                     {/* <!-- Content Side --> */}
@@ -99,7 +100,7 @@ const About: React.FC = () => {
                         </a>
                     </div>
                 </div>
-            </div>
+            </Wrapper>
         </section>
     )
 }

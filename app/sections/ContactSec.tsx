@@ -1,4 +1,5 @@
 import React from 'react';
+import Wrapper from '../components/Wrapper';
 //icons
 import { FaLocationDot } from "react-icons/fa6";
 import { GoClockFill } from "react-icons/go";
@@ -11,7 +12,7 @@ import { IoIosSend } from "react-icons/io";
 const Contact: React.FC = () => {
     return (
         <section className="code-section bg-white py-16 sm:py-24 lg:py-32" id="sb561k" data-update-id="contact">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Wrapper>
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                     {/* <!-- Left Content --> */}
                     <div>
@@ -104,7 +105,7 @@ const Contact: React.FC = () => {
                         </form>
                     </div>
                 </div>
-            </div>
+            </Wrapper>
         </section>
     )
 }
