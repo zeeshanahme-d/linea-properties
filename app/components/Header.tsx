@@ -51,7 +51,7 @@ const Header: React.FC = () => {
                     <button
                         className="md:hidden"
                     >
-                        <Hamburger rounded size={30} duration={0.4} easing="ease-in-out" toggled={menuOpen} toggle={setMenuOpen} />
+                        <Hamburger rounded size={30} duration={0.3} easing="ease-in-out" toggled={menuOpen} toggle={setMenuOpen} />
                     </button>
 
                 </div>
