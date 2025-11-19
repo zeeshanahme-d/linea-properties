@@ -151,7 +151,7 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
                 {/* Footer Bottom */}
-                <div className="pt-8 border-t border-white/10 text-gray text-sm flex justify-between">
+                <div className="pt-8 border-t border-white/10 flex-col items-center gap-2.5 sm:flex-row text-gray text-sm flex justify-between">
                     <span>© {new Date().getFullYear()} Linea Properties. All Rights Reserved.</span>
                     <span>
                         Built in Cameroon &bull; Made for Africa

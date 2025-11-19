@@ -1,10 +1,10 @@
 const nextConfig = {
+  output: "export",
   trailingSlash: false,
   productionBrowserSourceMaps: false,
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
-  output: "standalone",
 
   turbopack: {
     root: __dirname,
