@@ -20,7 +20,7 @@ const Feature: React.FC = () => {
                 </div>
 
                 <Wrapper>
-                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
                         {/* <!-- Left Content --> */}
                         <div className="text-center lg:text-left">
                             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 ">

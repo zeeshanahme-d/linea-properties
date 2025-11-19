@@ -22,7 +22,7 @@ const servicesData: ServiceItem[] = [
         title: "Property Search",
         description:
             "Browse verified listings for rent or sale. Filter by location, price, and property type to find your perfect match.",
-        link: "/services",
+        link: "#",
         icon: <IoSearch size={32} className="text-white" />,
         gradient: "linear-gradient(to bottom right,#DC6648 , #F9A385)",
         className: "",
@@ -32,7 +32,7 @@ const servicesData: ServiceItem[] = [
         title: "Escrow Protection",
         description:
             "Your money is safe until you confirm the property. No more worries about fraud or scams.",
-        link: "/services",
+        link: "#",
         icon: <FaShieldAlt size={32} className="text-white" />,
         gradient: "linear-gradient(to bottom right, #A66150 , #EDA693)",
         className: "",
@@ -42,7 +42,7 @@ const servicesData: ServiceItem[] = [
         title: "Locator & Profiles",
         description:
             "Connect directly with trusted agents and landlords. View verified profiles and ratings before you reach out.",
-        link: "/services",
+        link: "#",
         icon: <FaLocationDot size={32} className="text-white" />,
         gradient: "linear-gradient(to bottom right, #DC6648 , #A66150)",
         className: "",
@@ -52,7 +52,7 @@ const servicesData: ServiceItem[] = [
         title: "Smart Alerts",
         description:
             "Get notifications for new listings in your area. Never miss an opportunity to find your dream property.",
-        link: "/services",
+        link: "#",
         icon: <FaBell size={32} className="text-white" />,
         gradient: "linear-gradient(to bottom right, #EDA693 , #F9A385)",
         className: "",
@@ -115,7 +115,7 @@ const Services: React.FC = () => {
 
                 {/* <!-- Bottom CTA --> */}
                 <div className="text-center mt-16">
-                    <a href="/services" className="inline-flex items-center gap-1 bg-primary text-light px-10 py-5 rounded-lg hover:bg-primary-hover transition-all duration-300 font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                    <a href="#" className="inline-flex items-center gap-1 bg-primary text-light px-10 py-5 rounded-lg hover:bg-primary-hover transition-all duration-300 font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
                         Explore All Services
                         <HiOutlineArrowSmRight size={32} className='text-white' />
                     </a>

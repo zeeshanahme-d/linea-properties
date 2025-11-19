@@ -58,7 +58,7 @@ const Header: React.FC = () => {
 
             </Wrapper>
             <div className='relative'>
-                <div className={`bg-light absolute w-full py-5 px-4 sm:px-6 transition-all duration-500 z-10  ${menuOpen ? "top-0" : "-top-92 opacity-0 pointer-events-none"}`}>
+                <div className={`bg-light absolute w-full py-5 px-4 sm:px-6 transition-all duration-500 z-50  ${menuOpen ? "top-0" : "-top-92 opacity-0 pointer-events-none"}`}>
                     <div className="flex flex-col space-y-5">
                         <a
                             href="#about"

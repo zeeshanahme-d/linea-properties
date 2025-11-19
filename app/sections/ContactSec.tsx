@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import Wrapper from '../components/Wrapper';
 //icons
@@ -10,6 +11,18 @@ import { IoIosSend } from "react-icons/io";
 
 
 const Contact: React.FC = () => {
+
+    const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        const form = e.currentTarget as HTMLFormElement;
+        const formData = new FormData(form);
+
+        const data = Object.fromEntries(formData.entries());
+
+        console.log(data);
+    };
+
     return (
         <section className="code-section bg-white py-16 sm:py-24 lg:py-32" id="sb561k" data-update-id="contact">
             <Wrapper>
@@ -77,7 +90,7 @@ const Contact: React.FC = () => {
 
                     {/* <!-- Right Content - Contact Form --> */}
                     <div className="rounded-2xl p-5 md:p-8 sm:p-10 shadow-xl" style={{ backgroundImage: "linear-gradient(to bottom right, #FDE9E5 , #FAD3C8)" }}>
-                        <form data-landingsite-contact-form="" className="space-y-6" data-ls-rendered-at="1763529583988">
+                        <form className="space-y-6" onSubmit={handleFormSubmit}>
                             <div>
                                 <label htmlFor="name" className="block text-sm font-semibold text-dark mb-2">Name</label>
                                 <input type="text" id="name" name="name" required={true} className="w-full px-4 py-3 bg-white border-2 border-border-light rounded-lg focus:border-primary focus:outline-none transition-colors text-dark" placeholder="Your full name" />

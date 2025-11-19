@@ -1,4 +1,4 @@
-/* @import url('./custom-scroll-bar.css'); */
+@import url('./custom-scroll-bar.css');
 @import "tailwindcss";
 
 /* your existing design tokens */
@@ -64,13 +64,13 @@
 }
 
 /* Hide scrollbar for Chrome, Safari, Edge */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 
 * {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  /* scrollbar-width: none;
+  -ms-overflow-style: none; */
   box-sizing: border-box;
 }
 

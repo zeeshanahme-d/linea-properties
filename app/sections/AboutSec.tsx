@@ -65,7 +65,7 @@ const About: React.FC = () => {
                             <span className="text-primary"> Africans</span>
                         </h2>
 
-                        <p className="text-lg text-dark mb-6 leading-relaxed">
+                        <p className="text-lg text-gray mb-6 ">
                             Linea is a Cameroon-built real estate app designed to simplify how
                             Africans find and list verified properties. Whether you're searching
                             for an apartment in Douala, land in Yaoundé, or a commercial space in
@@ -87,14 +87,14 @@ const About: React.FC = () => {
                                         </div>
                                         <div>
                                             <h3 className="font-semibold text-dark mb-1">{feature.title}</h3>
-                                            <p className="text-sm text-dark">{feature.description}</p>
+                                            <p className="text-sm text-gray">{feature.description}</p>
                                         </div>
                                     </div>
                                 );
                             })}
                         </div>
 
-                        <a href="/about" className="inline-flex items-center gap-1 bg-primary text-light px-8 py-4 rounded-lg hover:bg-accent-dark transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <a href="#" className="inline-flex items-center gap-1 bg-primary text-light px-8 py-4 rounded-lg hover:bg-accent-dark transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                             Learn More About Us
                             <HiOutlineArrowSmRight size={24} />
                         </a>
