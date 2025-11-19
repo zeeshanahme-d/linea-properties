@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-  width: 0.35rem;
+  width: 0.4rem;
   height: 0.25rem;
 }
 
@@ -11,9 +11,9 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #FAD3C8;
+  background: #DC6648;
   border-radius: 100vh;
-  border: 0.2rem solid #FAD3C8;
+  border: 0.2rem solid #DC6648;
 }
 
 /* Handle on hover */

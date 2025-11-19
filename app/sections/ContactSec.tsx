@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <section className="code-section bg-white py-16 sm:py-24 lg:py-32" id="sb561k" data-update-id="contact">
+        <section className="code-section bg-white py-16 sm:py-24 lg:py-32" id='contact-us'>
             <Wrapper>
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                     {/* <!-- Left Content --> */}

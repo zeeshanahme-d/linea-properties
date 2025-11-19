@@ -33,7 +33,7 @@ const features = [
 
 const About: React.FC = () => {
     return (
-        <section className="bg-white py-16 sm:py-24 lg:py-32">
+        <section className="bg-white py-16 sm:py-24 lg:py-32" id='about'>
             <Wrapper>
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* <!-- Image Side --> */}

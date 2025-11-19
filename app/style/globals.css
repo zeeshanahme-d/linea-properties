@@ -80,4 +80,5 @@ body {
   color: var(--foreground);
   font-family: var(--font-body);
   overflow-x: hidden !important;
+  scroll-behavior: smooth;
 }

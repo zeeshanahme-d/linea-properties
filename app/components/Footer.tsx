@@ -1,6 +1,8 @@
+"use client"
 import React from "react";
 import Wrapper from "./Wrapper";
 import Image from "next/image";
+import { smoothScroll } from "../lib/scrollToElement";
 //icons
 import { FaLinkedin, FaFacebookF, FaTiktok, FaApple, } from "react-icons/fa";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
@@ -39,34 +41,37 @@ const Footer: React.FC = () => {
                         <h3 className="font-heading text-lg font-bold mb-6">Quick Links</h3>
                         <ul className="space-y-3 text-gray-400 text-base">
                             <li>
-                                <a href="#" className="text-gray hover:text-primary transition-colors duration-300 flex items-center gap-1">
+                                <button
+                                    onClick={() => smoothScroll("home")}
+                                    className="text-gray hover:text-primary cursor-pointer transition-colors duration-300 flex items-center gap-1">
                                     <MdKeyboardArrowRight size={20} />
                                     Home
-                                </a>
+                                </button>
                             </li>
                             <li>
-                                <a href="#about" className="text-gray hover:text-primary transition-colors duration-300 flex items-center gap-1">
+                                <button
+                                    onClick={() => smoothScroll("about")}
+                                    className="text-gray hover:text-primary cursor-pointer transition-colors duration-300 flex items-center gap-1">
                                     <MdKeyboardArrowRight size={20} />
                                     About Us
-
-                                </a>
+                                </button>
                             </li>
                             <li>
-                                <a
-                                    href="#services"
-                                    className="text-gray hover:text-primary transition-colors duration-300 flex items-center gap-1"
+                                <button
+                                    onClick={() => smoothScroll("services")}
+                                    className="text-gray hover:text-primary cursor-pointer transition-colors duration-300 flex items-center gap-1"
                                 >
                                     <MdKeyboardArrowRight size={20} />
                                     Services
-
-                                </a>
+                                </button>
                             </li>
                             <li>
-                                <a href="#blog" className="text-gray hover:text-primary transition-colors duration-300 flex items-center gap-1">
+                                <button
+                                    onClick={() => smoothScroll("home")}
+                                    className="text-gray hover:text-primary cursor-pointer transition-colors duration-300 flex items-center gap-1">
                                     <MdKeyboardArrowRight size={20} />
                                     Blog
-
-                                </a>
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -76,25 +81,28 @@ const Footer: React.FC = () => {
                         <h3 className="font-heading text-lg font-bold mb-6">Resources</h3>
                         <ul className="space-y-3 text-gray-400 text-base">
                             <li>
-                                <a href="#contact" className="text-gray hover:text-primary transition-colors duration-300 flex items-center gap-1">
+                                <button
+                                    onClick={() => smoothScroll("contact-us")}
+                                    className="text-gray hover:text-primary cursor-pointer transition-colors duration-300 flex items-center gap-1">
                                     <MdKeyboardArrowRight size={20} />
                                     Contact
-
-                                </a>
+                                </button>
                             </li>
                             <li>
-                                <a href="#faq" className="text-gray hover:text-primary transition-colors duration-300 flex items-center gap-1">
+                                <button
+                                    onClick={() => smoothScroll("home")}
+                                    className="text-gray hover:text-primary cursor-pointer transition-colors duration-300 flex items-center gap-1">
                                     <MdKeyboardArrowRight size={20} />
                                     FAQ
-
-                                </a>
+                                </button>
                             </li>
                             <li>
-                                <a href="#legal" className="text-gray hover:text-primary transition-colors duration-300 flex items-center gap-1">
+                                <button
+                                    onClick={() => smoothScroll("home")}
+                                    className="text-gray hover:text-primary cursor-pointer transition-colors duration-300 flex items-center gap-1">
                                     <MdKeyboardArrowRight size={20} />
                                     Legal
-
-                                </a>
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -145,9 +153,9 @@ const Footer: React.FC = () => {
                 {/* Footer Bottom */}
                 <div className="pt-8 border-t border-white/10 text-gray text-sm flex justify-between">
                     <span>© {new Date().getFullYear()} Linea Properties. All Rights Reserved.</span>
-                    {/* <span>
+                    <span>
                         Built in Cameroon &bull; Made for Africa
-                    </span> */}
+                    </span>
                 </div>
             </Wrapper>
 

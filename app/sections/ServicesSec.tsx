@@ -62,7 +62,7 @@ const servicesData: ServiceItem[] = [
 
 const Services: React.FC = () => {
     return (
-        <section className="py-16 sm:py-24 lg:py-32" style={{ backgroundImage: "linear-gradient(to bottom right, #FDE9E5 , #fff)" }}>
+        <section className="py-16 sm:py-24 lg:py-32" style={{ backgroundImage: "linear-gradient(to bottom right, #FDE9E5 , #fff)" }} id='services'>
 
             <Wrapper>
                 {/* <!-- Section Header --> */}
