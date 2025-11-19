@@ -54,17 +54,17 @@ const Feature: React.FC = () => {
                             </div>
 
                             {/* <!-- Trust Badges --> */}
-                            <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
+                            <div className="flex flex-wrap gap-6 justify-center lg:justify-start text-sm md:text-base">
                                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                                    <TiStarFullOutline size={24} className="text-[#fde047]" />
+                                    <TiStarFullOutline size={20} className="text-[#fde047]" />
                                     <span className="text-white font-semibold">4.8/5 Rating</span>
                                 </div>
                                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                                    <FaDownload size={18} className="text-white" />
+                                    <FaDownload className="text-white" />
                                     <span className="text-white font-semibold">10K+ Downloads</span>
                                 </div>
                                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                                    <FaLock size={18} className="text-white" />
+                                    <FaLock className="text-white" />
                                     <span className="text-white font-semibold">100% Secure</span>
                                 </div>
                             </div>
