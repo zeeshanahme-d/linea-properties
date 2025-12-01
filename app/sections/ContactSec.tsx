@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
                             Get In Touch
                         </div>
 
-                        <h2 className="font-['Poppins'] text-3xl sm:text-4xl lg:text-5xl font-bold text-dark mb-6 leading-tight">
+                        <h2 className="font-heading -ml-0.5 text-3xl sm:text-4xl lg:text-5xl font-bold text-dark mb-6 leading-tight">
                             Press &amp; Media
                             <span className="text-primary"> Inquiries</span>
                         </h2>
@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
                     </div>
 
                     {/* <!-- Right Content - Contact Form --> */}
-                    <div className="rounded-2xl p-5 md:p-8 sm:p-10 shadow-xl" style={{ backgroundImage: "linear-gradient(to bottom right, #FDE9E5 , #FAD3C8)" }}>
+                    <div className="rounded-2xl p-5 md:p-10 shadow-xl" style={{ backgroundImage: "linear-gradient(to bottom right, #FDE9E5 , #FAD3C8)" }}>
                         <form className="space-y-6" onSubmit={handleFormSubmit}>
                             <div>
                                 <label htmlFor="name" className="block text-sm font-semibold text-dark mb-2">Name</label>

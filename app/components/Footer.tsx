@@ -31,8 +31,8 @@ const Footer: React.FC = () => {
                             Africa&apos;s most trusted real estate app. Find verified properties
                             across Cameroon with confidence and security.
                         </p>
-                        <p className="text-white text-base flex items-center gap-1">
-                            <FaLocationDot size={16} className="text-primary" /> Douala, Cameroon
+                        <p className="text-white text-sm flex items-center gap-1">
+                            <FaLocationDot size={14} className="text-primary" /> Douala, Cameroon
                         </p>
                     </div>
 
@@ -154,7 +154,7 @@ const Footer: React.FC = () => {
                 <div className="pt-8 border-t border-white/10 flex-col items-center gap-2.5 sm:flex-row text-gray text-sm flex justify-between">
                     <span>© {new Date().getFullYear()} Linea Properties. All Rights Reserved.</span>
                     <span>
-                        Built in Cameroon &bull; Made for Africa
+                        Built in Cameroon <span className="text-primary">&bull;</span> Made for Africa
                     </span>
                 </div>
             </Wrapper>

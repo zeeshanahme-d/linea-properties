@@ -32,7 +32,7 @@ const Header: React.FC = () => {
                             onClick={() => smoothScroll("about")}
                             className="cursor-pointer text-dark hover:text-primary transition-colors duration-300 font-medium"
                         >
-                            About
+                            About Us
                         </button>
                         <button
                             onClick={() => smoothScroll("services")}
@@ -52,24 +52,25 @@ const Header: React.FC = () => {
                     <button
                         className="md:hidden"
                     >
-                        <Hamburger rounded size={30} duration={0.3} easing="ease-in-out" toggled={menuOpen} toggle={setMenuOpen} />
+                        <Hamburger rounded size={30} duration={0.2} easing="ease-in-out" toggled={menuOpen} toggle={setMenuOpen} />
                     </button>
 
                 </div>
 
             </Wrapper>
+
             <div className='relative'>
                 <div className={`bg-light w-full py-5 px-4 sm:px-6 transition-all duration-500  ${menuOpen ? "block" : "hidden pointer-events-none"}`}>
                     <div className="flex flex-col space-y-5">
                         <button
                             onClick={() => { setMenuOpen(false); smoothScroll("contact-us") }}
-                            className="text-dark hover:text-primary cursor-pointer transition-colors duration-300 font-medium py-1"
+                            className="text-dark text-start hover:text-primary cursor-pointer transition-colors duration-300 font-medium py-1"
                         >
                             About Us
                         </button>
                         <button
                             onClick={() => { setMenuOpen(false); smoothScroll("contact-us") }}
-                            className="text-dark hover:text-primary cursor-pointer transition-colors duration-300 font-medium py-1"
+                            className="text-dark text-start hover:text-primary cursor-pointer transition-colors duration-300 font-medium py-1"
                         >
                             Services
                         </button>

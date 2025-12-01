@@ -12,15 +12,15 @@ import { MdVerifiedUser, MdHome, MdGroups2 } from "react-icons/md";
 const Banner: React.FC = () => {
     return (
         <section className='relative' id="banner">
-            <div className='relative pb-16 pt-20 sm:pb-24 lg:pb-32 overflow-hidden bg-accent-light' style={{ backgroundImage: "linear-gradient(to bottom right, #FDE9E5 , #F9F9F9)" }}>
+            <div className='relative py-16 sm:py-24 lg:py-32 overflow-hidden bg-accent-light' style={{ backgroundImage: "linear-gradient(to bottom right, #FDE9E5 , #F9F9F9)" }}>
                 {/* <!-- Decorative Element --> */}
                 <div className="absolute top-20 right-10 w-72 h-72 bg-accent-light rounded-full opacity-30 blur-3xl"></div>
                 <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent rounded-full opacity-20 blur-3xl"></div>
                 <Wrapper>
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
                         {/* <!-- Left Content --> */}
-                        <div className="text-center lg:text-left">
-                            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
+                        <div className="text-center lg:text-start">
+                            <h1 className="font-heading text-4xl -ml-0.5 sm:text-5xl lg:text-6xl font-bold text-dark mb-6">
                                 Find Your Next Home with
                                 <span className="text-primary"> Linea</span>
                             </h1>
@@ -106,7 +106,7 @@ const Banner: React.FC = () => {
                     </div>
                 </Wrapper>
             </div>
-            <div className="absolute -bottom-1 xl:-bottom-8 2xl:-bottom-16 left-0 right-0">
+            <div className="absolute bottom-0 left-0 right-0">
                 <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
                     <path d="M0,64 C360,16 720,16 1080,48 C1200,56 1320,72 1440,80 L1440,120 L0,120 Z" fill="white"></path>
                 </svg>

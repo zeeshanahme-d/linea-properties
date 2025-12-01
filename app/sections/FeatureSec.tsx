@@ -12,7 +12,7 @@ import Wrapper from '../components/Wrapper';
 const Feature: React.FC = () => {
     return (
         <section className='relative'>
-            <div className="pb-16 pt-20 sm:pb-24 lg:pb-32 overflow-hidden" style={{ backgroundImage: "linear-gradient(to bottom right, #DC6648 , #A66150)" }}>
+            <div className="py-16 sm:py-24 lg:py-32 overflow-hidden" style={{ backgroundImage: "linear-gradient(to bottom right, #DC6648 , #A66150)" }}>
                 {/* <!-- Decorative Elements --> */}
                 <div className="absolute top-0 left-0 w-full h-full opacity-10">
                     <div className="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
@@ -99,7 +99,7 @@ const Feature: React.FC = () => {
                 </Wrapper>
             </div>
             {/* <!-- Bottom Wave --> */}
-            <div className="absolute -bottom-1 md:-bottom-6 left-0 right-0">
+            <div className="absolute -bottom-1 left-0 right-0">
                 <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
                     <path d="M0,64 C360,16 720,16 1080,48 C1200,56 1320,72 1440,80 L1440,120 L0,120 Z" fill="white"></path>
                 </svg>
