@@ -64,7 +64,7 @@ const Banner: React.FC = () => {
                                     {/* <!-- Phone Frame --> */}
                                     <div className="relative bg-dark rounded-[2.5rem] p-3 shadow-2xl">
                                         <div className="bg-white rounded-4xl overflow-hidden">
-                                            <Image width={100} height={100} src="/images/bannersec-women.avif" alt="A fashionable African woman in a vibrant dress checks her phone outdoors.  The urban setting is blurred, focusing attention on her." className="w-full h-auto object-cover" />
+                                            <Image width={100} height={100} src="/images/bannersec-wome.jpeg" alt="A fashionable African woman in a vibrant dress checks her phone outdoors.  The urban setting is blurred, focusing attention on her." className="w-full h-auto object-cover" />
                                         </div>
                                     </div>
                                 </div>

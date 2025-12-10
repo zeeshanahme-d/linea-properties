@@ -39,7 +39,7 @@ const About: React.FC = () => {
                     {/* <!-- Image Side --> */}
                     <div className="relative order-2 lg:order-1">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
-                            <Image width={100} height={100} src="/images/about-womens.avif" alt="Traditional African women, group and studio for face, jewelry or beads necklace in clothes by brown background. Black people, model and indigenous fashion for friends, culture or portrait for kwanzaa" className="w-full h-auto" />
+                            <Image width={100} height={100} src="/images/about-women.jpeg" alt="Traditional African women, group and studio for face, jewelry or beads necklace in clothes by brown background. Black people, model and indigenous fashion for friends, culture or portrait for kwanzaa" className="w-full h-auto" />
 
                             {/* <!-- Overlay Badge --> */}
                             <div className="absolute top-6 left-6 bg-white rounded-xl shadow-xl p-4">

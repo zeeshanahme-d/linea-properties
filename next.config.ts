@@ -5,6 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
+  distDir: 'out',
 
   turbopack: {
     root: __dirname,

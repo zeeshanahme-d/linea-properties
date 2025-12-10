@@ -76,7 +76,7 @@ const Feature: React.FC = () => {
                                 <div className="relative z-20 transform hover:scale-105 transition-transform duration-500">
                                     <div className="w-64 sm:w-80 mx-auto bg-dark rounded-[2.5rem] p-3 shadow-2xl">
                                         <div className="bg-white rounded-4xl overflow-hidden">
-                                            <Image width={100} height={100} src="/images/feature-section-womens.avif" alt="Two young beautiful African fashion models." className="w-full h-auto object-cover" />
+                                            <Image width={100} height={100} src="/images/feature-section-women.jpeg" alt="Two young beautiful African fashion models." className="w-full h-auto object-cover" />
                                         </div>
                                     </div>
                                 </div>
