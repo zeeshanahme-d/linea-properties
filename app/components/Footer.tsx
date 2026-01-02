@@ -65,14 +65,14 @@ const Footer: React.FC = () => {
                                     Services
                                 </button>
                             </li>
-                            <li>
+                            {/* <li>
                                 <button
                                     onClick={() => smoothScroll("home")}
                                     className="text-gray hover:text-primary cursor-pointer transition-colors duration-300 flex items-center gap-1">
                                     <MdKeyboardArrowRight size={20} />
                                     Blog
                                 </button>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
 
@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
                                     Contact
                                 </button>
                             </li>
-                            <li>
+                            {/* <li>
                                 <button
                                     onClick={() => smoothScroll("home")}
                                     className="text-gray hover:text-primary cursor-pointer transition-colors duration-300 flex items-center gap-1">
@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
                                     <MdKeyboardArrowRight size={20} />
                                     Legal
                                 </button>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
 
@@ -130,22 +130,16 @@ const Footer: React.FC = () => {
                         {/* Social Icons */}
                         <div className="flex items-center gap-3 mt-2">
                             <a
-                                href="#linkedin"
+                                href=" https://www.linkedin.com/company/lineaproperties"
                                 className="bg-[#ffffff1a] p-2.5 rounded-lg hover:bg-primary duration-300 transition-colors"
                             >
                                 <FaLinkedin size={24} />
                             </a>
                             <a
-                                href="#facebook"
+                                href="https://www.facebook.com/profile.php?id=61581879644321"
                                 className="bg-[#ffffff1a] p-2.5 rounded-lg hover:bg-primary duration-300 transition-colors"
                             >
                                 <FaFacebookF size={24} />
-                            </a>
-                            <a
-                                href="#tiktok"
-                                className="bg-[#ffffff1a] p-2.5 rounded-lg hover:bg-primary duration-300 transition-colors"
-                            >
-                                <FaTiktok size={24} />
                             </a>
                         </div>
                     </div>

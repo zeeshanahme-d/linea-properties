@@ -1,26 +1,50 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
 import Wrapper from '../components/Wrapper';
+import toast from 'react-hot-toast';
 //icons
 import { FaLocationDot } from "react-icons/fa6";
 import { GoClockFill } from "react-icons/go";
-import { FaLinkedin, FaFacebookF, FaTiktok, FaLock } from "react-icons/fa";
+import { FaLock } from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
+import emailjs from '@emailjs/browser';
 
 
 
 
 const Contact: React.FC = () => {
+    const [loading, setLoading] = useState(false);
 
-    const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        if (loading) return;
         e.preventDefault();
+        setLoading(true);
 
         const form = e.currentTarget as HTMLFormElement;
         const formData = new FormData(form);
 
         const data = Object.fromEntries(formData.entries());
 
-        console.log(data);
+        try {
+            await emailjs.send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+                {
+                    name: (data.name as unknown as string).trim(),
+                    email: (data.email as unknown as string).trim(),
+                    message: (data.message as unknown as string).trim(),
+                },
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+            );
+            form.reset();
+
+            toast.success("Message sent successfully. We will get back to you soon.");
+        } catch (error) {
+            console.error(error);
+            toast.error("Failed to send message. Please try again later.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -75,8 +99,8 @@ const Contact: React.FC = () => {
 
                         {/* <!-- Social Links --> */}
                         <div className="flex items-center gap-4">
-                            <span className="text-gray font-semibold">Follow Us:</span>
-                            <a href="#" target="_blank" className="group w-12 h-12 bg-bg-base hover:bg-primary text-primary hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                            <span className="text-gray font-medium">For any legal or policy-related queries, please contact: <a href="mailto:Support@lineaproperties.com" className="text-primary font-semibold hover:underline">support@lineaproperties.com</a></span>
+                            {/* <a href="#" target="_blank" className="group w-12 h-12 bg-bg-base hover:bg-primary text-primary hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                                 <FaLinkedin size={24} className='text-primary group-hover:text-white transition-all duration-300' />
                             </a>
                             <a href="#" target="_blank" className="group w-12 h-12 bg-bg-base hover:bg-primary text-primary hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110">
@@ -84,29 +108,29 @@ const Contact: React.FC = () => {
                             </a>
                             <a href="#" target="_blank" className="group w-12 h-12 bg-bg-base hover:bg-primary text-primary hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                                 <FaTiktok size={24} className='text-primary group-hover:text-white transition-all duration-300' />
-                            </a>
+                            </a> */}
                         </div>
                     </div>
 
                     {/* <!-- Right Content - Contact Form --> */}
                     <div className="rounded-2xl p-5 md:p-10 shadow-xl" style={{ backgroundImage: "linear-gradient(to bottom right, #FDE9E5 , #FAD3C8)" }}>
-                        <form className="space-y-6" onSubmit={handleFormSubmit}>
+                        <form className="space-y-6" onSubmit={handleFormSubmit} autoComplete="off" autoSave="off" autoCapitalize='off' spellCheck='true' autoCorrect='false'>
                             <div>
                                 <label htmlFor="name" className="block text-sm font-semibold text-dark mb-2">Name</label>
-                                <input type="text" id="name" name="name" required={true} className="w-full px-4 py-3 bg-white border-2 border-border-light rounded-lg focus:border-primary focus:outline-none transition-colors text-dark" placeholder="Your full name" />
+                                <input type="text" disabled={loading} id="name" name="name" required={true} className="w-full px-4 py-3 bg-white border-2 border-border-light rounded-lg focus:border-primary focus:outline-none transition-colors text-dark" placeholder="Your full name" />
                             </div>
 
                             <div>
                                 <label htmlFor="email" className="block text-sm font-semibold text-dark mb-2">Email</label>
-                                <input type="email" id="email" name="email" required={true} className="w-full px-4 py-3 bg-white border-2 border-border-light rounded-lg focus:border-primary focus:outline-none transition-colors text-dark" placeholder="your@email.com" />
+                                <input type="email" disabled={loading} id="email" name="email" required={true} className="w-full px-4 py-3 bg-white border-2 border-border-light rounded-lg focus:border-primary focus:outline-none transition-colors text-dark" placeholder="your@email.com" />
                             </div>
 
                             <div>
                                 <label htmlFor="message" className="block text-sm font-semibold text-dark mb-2">Message</label>
-                                <textarea id="message" name="message" rows={5} required={true} className="w-full px-4 py-3 bg-white border-2 border-border-light rounded-lg focus:border-primary focus:outline-none transition-colors text-dark resize-none" placeholder="Tell us about your inquiry..."></textarea>
+                                <textarea id="message" disabled={loading} name="message" rows={5} required={true} className="w-full px-4 py-3 bg-white border-2 border-border-light rounded-lg focus:border-primary focus:outline-none transition-colors text-dark resize-none" placeholder="Tell us about your inquiry..."></textarea>
                             </div>
 
-                            <button type="submit" className="w-full bg-primary text-light px-8 py-4 rounded-lg cursor-pointer hover:bg-primary-hover transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                            <button type="submit" disabled={loading} className="w-full bg-primary text-light px-8 py-4 rounded-lg cursor-pointer hover:bg-primary-hover transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2">
                                 Send Message
                                 <IoIosSend size={28} className='text-white' />
                             </button>

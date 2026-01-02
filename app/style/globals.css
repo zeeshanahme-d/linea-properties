@@ -82,3 +82,23 @@ body {
   overflow-x: hidden !important;
   scroll-behavior: smooth;
 }
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+textarea:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+button:hover:not(:disabled) {
+  opacity: 1 !important;
+  cursor: pointer !important;
+}
